@@ -1,4 +1,6 @@
+import 'package:english_word/viewmodel/menu_viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LogInButton extends StatelessWidget {
   const LogInButton({
@@ -7,21 +9,24 @@ class LogInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _menuModel = Provider.of<MenuModel>(context);
     return DefaultButton(
       text: "Kayıt ol",
-      press: () {},
+      press: () {
+        _menuModel.setMenuIndex(3);
+      },
     );
   }
 }
 
 class DefaultButton extends StatelessWidget {
   final String text;
-  final Function? press;
+  final VoidCallback press;
 
   const DefaultButton({
     Key? key,
     required this.text,
-    this.press,
+    required this.press,
   }) : super(key: key);
 
   @override
@@ -35,7 +40,7 @@ class DefaultButton extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: 25, vertical: 20),
           ),
         ),
-        onPressed: () => press,
+        onPressed: press,
         child: Text(
           text.toUpperCase(),
           style: TextStyle(fontWeight: FontWeight.bold),

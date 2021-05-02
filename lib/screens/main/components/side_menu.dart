@@ -26,6 +26,7 @@ class SideMenu extends StatelessWidget {
                 title: _menuModel.menuItems[index],
                 press: () {
                   _menuModel.setMenuIndex(index);
+                  Navigator.of(context).pop();
                 },
               ),
             ),

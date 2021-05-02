@@ -23,32 +23,34 @@ class Header extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        children: <Widget>[
-          if (Responsive.isMobile(context))
-            IconButton(
-              icon: Icon(
-                Icons.menu,
+      child: SafeArea(
+        child: Row(
+          children: <Widget>[
+            if (Responsive.isMobile(context))
+              IconButton(
+                icon: Icon(
+                  Icons.menu,
+                ),
+                onPressed: () {
+                  _menuModel.openOrCloseDrawer();
+                },
               ),
-              onPressed: () {
-                _menuModel.openOrCloseDrawer();
-              },
+            Image.asset(
+              "assets/images/icon.jpeg",
+              height: 25,
+              alignment: Alignment.topCenter,
             ),
-          Image.asset(
-            "assets/images/icon.jpeg",
-            height: 25,
-            alignment: Alignment.topCenter,
-          ),
-          SizedBox(width: 5),
-          Text(
-            "English Word".toUpperCase(),
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Color.fromRGBO(71, 69, 111, 1)),
-          ),
-          Spacer(),
-          if (!Responsive.isMobile(context)) WebMenu(),
-          Spacer(),
-          LogInButton(),
-        ],
+            SizedBox(width: 5),
+            Text(
+              "English Word".toUpperCase(),
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Color.fromRGBO(71, 69, 111, 1)),
+            ),
+            Spacer(),
+            if (!Responsive.isMobile(context)) WebMenu(),
+            Spacer(),
+            LogInButton(),
+          ],
+        ),
       ),
     );
   }

@@ -1,3 +1,7 @@
+import 'package:english_word/screens/home/home_screen.dart';
+import 'package:english_word/screens/kelime_ekle/kelime_ekle_screen.dart';
+import 'package:english_word/screens/login/login_screen.dart';
+import 'package:english_word/screens/test/test_screen.dart';
 import 'package:flutter/material.dart';
 
 enum ViewState { idle, Busy }
@@ -18,6 +22,8 @@ class MenuModel with ChangeNotifier {
 
   List<String> get menuItems => ["Home", "Kelime Ekle", "Test"];
 
+  List<Widget> _pages = [HomeScreen(), KelimeEkleScreen(), TestScreen(), LoginScreen()];
+
   GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
 
   void openOrCloseDrawer() {
@@ -32,5 +38,9 @@ class MenuModel with ChangeNotifier {
   void setMenuIndex(value) {
     _selectedMenuIndex = value;
     notifyListeners();
+  }
+
+  Widget getScreen() {
+    return _pages[_selectedMenuIndex];
   }
 }

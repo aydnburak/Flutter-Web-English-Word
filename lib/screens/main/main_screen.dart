@@ -15,6 +15,9 @@ class MainScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Header(),
+            SafeArea(
+              child: _menuModel.getScreen(),
+            ),
           ],
         ),
       ),
