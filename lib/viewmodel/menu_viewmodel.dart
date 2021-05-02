@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 enum ViewState { idle, Busy }
 
 class MenuModel with ChangeNotifier {
-  int _selectedMenuIndex = 0;
+  int _selectedMenuIndex = 3;
   ViewState _viewState = ViewState.idle;
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
