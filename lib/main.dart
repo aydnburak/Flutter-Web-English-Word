@@ -1,11 +1,14 @@
 import 'package:english_word/constants.dart';
+import 'package:english_word/locator.dart';
 import 'package:english_word/screens/main/main_screen.dart';
 import 'package:english_word/viewmodel/menu_viewmodel.dart';
 import 'package:english_word/viewmodel/user_viewmodel.dart';
+import 'package:english_word/viewmodel/word_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -16,6 +19,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => MenuModel()),
         ChangeNotifierProvider(create: (context) => UserModel()),
+        ChangeNotifierProvider(create: (context) => WordModel()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

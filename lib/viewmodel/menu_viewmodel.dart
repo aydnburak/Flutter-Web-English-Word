@@ -1,3 +1,5 @@
+import 'package:english_word/locator.dart';
+import 'package:english_word/repository/user_repository.dart';
 import 'package:english_word/screens/home/home_screen.dart';
 import 'package:english_word/screens/kelime_ekle/kelime_ekle_screen.dart';
 import 'package:english_word/screens/login/login_screen.dart';
@@ -7,8 +9,9 @@ import 'package:flutter/material.dart';
 enum ViewState { idle, Busy }
 
 class MenuModel with ChangeNotifier {
-  int _selectedMenuIndex = 3;
+  int _selectedMenuIndex = 0;
   ViewState _viewState = ViewState.idle;
+  UserRepository _userRepository = locator<UserRepository>();
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   int get selectedMenuIndex => _selectedMenuIndex;

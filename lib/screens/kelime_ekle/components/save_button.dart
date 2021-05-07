@@ -1,19 +1,23 @@
+import 'package:english_word/viewmodel/user_viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SaveButton extends StatelessWidget {
+  final VoidCallback press;
+
   const SaveButton({
     Key? key,
+    required this.press,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final _userModel = Provider.of<UserModel>(context);
     return Padding(
       padding: EdgeInsets.all(50),
       child: InkWell(
         borderRadius: BorderRadius.circular(25),
-        onTap: () {
-          print("bas");
-        },
+        onTap: press,
         child: Container(
           padding: EdgeInsets.all(15),
           decoration: BoxDecoration(

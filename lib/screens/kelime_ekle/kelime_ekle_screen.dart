@@ -15,7 +15,6 @@ class KelimeEkleScreen extends StatelessWidget {
             height: height * 0.1,
           ),
         Responsive.isMobile(context) ? MobileInput() : DesktopOrTabletInput(),
-        SaveButton()
       ],
     );
   }

@@ -1,5 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:english_word/viewmodel/word_viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DataWeb extends StatelessWidget {
   const DataWeb({
@@ -8,6 +10,7 @@ class DataWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _wordModel = Provider.of<WordModel>(context);
     double height = MediaQuery.of(context).size.height;
     return Container(
       height: height * 0.2,
@@ -27,7 +30,7 @@ class DataWeb extends StatelessWidget {
                   ),
                 ],
               ),
-              child: AutoSizeText("Toplam Kelime : 10")),
+              child: AutoSizeText("Toplam Kelime : " + _wordModel.kelimeler.length.toString())),
           Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -41,7 +44,7 @@ class DataWeb extends StatelessWidget {
                   ),
                 ],
               ),
-              child: AutoSizeText("Dogru Sayısı : 0")),
+              child: AutoSizeText("Dogru Sayısı : " + _wordModel.dogruSayisi.toString())),
           Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -55,10 +58,12 @@ class DataWeb extends StatelessWidget {
                   ),
                 ],
               ),
-              child: AutoSizeText("Yanlış Sayısı : 0")),
+              child: AutoSizeText("Yanlış Sayısı : " + _wordModel.yanlisSayisi.toString())),
           InkWell(
             borderRadius: BorderRadius.all(Radius.circular(25)),
-            onTap: () {},
+            onTap: () {
+              _wordModel.testReset();
+            },
             child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
