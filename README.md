@@ -16,10 +16,12 @@ Projemin BackEnd tarafını Node.js Express kullanarak hazırladım. DB içinde 
 
 ### Kullandığım Api İsteklerim
 
-| Syntax | Description |
+| Method | İstek |
 | ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| POST | https://englishwordapi.herokuapp.com/api/users/login |
+| POST | https://englishwordapi.herokuapp.com/api/users/register |
+| GET | https://englishwordapi.herokuapp.com/api/word/<userID> |
+| POST | https://englishwordapi.herokuapp.com/api/word/addWord |
 
 
 
