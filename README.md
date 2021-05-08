@@ -7,15 +7,12 @@ Kullanıcılar Sisteme Kayıt Olarak Verilerini Saklayıp istedikleri zaman kend
 
 ![englishword](https://user-images.githubusercontent.com/55949311/117519551-aad12100-afac-11eb-843e-027724f82099.gif)
 
+### dependencies:
 ```
-
-### dependencies: 
-
  - get_it:
  - provider:
  - auto_size_text:
  - dio: 
- 
 ```
 
 ## Projemin BackEnd Tarafı
