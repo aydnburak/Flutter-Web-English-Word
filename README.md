@@ -1,6 +1,7 @@
 # english_word
 
 A new Flutter application.
+![englishword](https://user-images.githubusercontent.com/55949311/117519551-aad12100-afac-11eb-843e-027724f82099.gif)
 
 ## Getting Started
 
