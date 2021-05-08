@@ -9,7 +9,8 @@ Kullanıcılar Sisteme Kayıt Olarak Verilerini Saklayıp istedikleri zaman kend
 
 ```
 
-### dependencies:
+### dependencies: 
+
  - get_it:
  - provider:
  - auto_size_text:
