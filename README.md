@@ -7,6 +7,12 @@ Kullanıcılar Sisteme Kayıt Olarak Verilerini Saklayıp istedikleri zaman kend
 
 ![englishword](https://user-images.githubusercontent.com/55949311/117519551-aad12100-afac-11eb-843e-027724f82099.gif)
 
+```
+- First item
+- Second item
+- Third item
+```
+
 ## Projemin BackEnd Tarafı
 
 Projemin BackEnd tarafını Node.js Express kullanarak hazırladım. DB içinde mongo Atlas Kullandım.                      
@@ -20,7 +26,7 @@ Projemin BackEnd tarafını Node.js Express kullanarak hazırladım. DB içinde 
 | ----------- | ----------- |
 | POST | englishwordapi.herokuapp.com/api/users/login |
 | POST | englishwordapi.herokuapp.com/api/users/register |
-| GET | /englishwordapi.herokuapp.com/api/word/<userID> |
+| GET | englishwordapi.herokuapp.com/api/word/:userID |
 | POST | englishwordapi.herokuapp.com/api/word/addWord |
 
 
