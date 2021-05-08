@@ -18,10 +18,10 @@ Projemin BackEnd tarafını Node.js Express kullanarak hazırladım. DB içinde 
 
 | Method | İstek |
 | ----------- | ----------- |
-| POST | https://englishwordapi.herokuapp.com/api/users/login |
-| POST | https://englishwordapi.herokuapp.com/api/users/register |
-| GET | https://englishwordapi.herokuapp.com/api/word/<userID> |
-| POST | https://englishwordapi.herokuapp.com/api/word/addWord |
+| POST | englishwordapi.herokuapp.com/api/users/login |
+| POST | englishwordapi.herokuapp.com/api/users/register |
+| GET | /englishwordapi.herokuapp.com/api/word/<userID> |
+| POST | englishwordapi.herokuapp.com/api/word/addWord |
 
 
 
