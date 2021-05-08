@@ -1,17 +1,16 @@
-# english_word
+# English word
 
-A new Flutter application.
+Flutter Web Kullanarak hazırladıgım Projem:
+
+Yeni İngilizce Ögrenen Kişiler İçin Ögrendikleri Yeni Kelimeleri Ekleyerek Kendilerini Test Etmeleri İcin Hazırlanmış bir Web Uygulaması.  
+
 ![englishword](https://user-images.githubusercontent.com/55949311/117519551-aad12100-afac-11eb-843e-027724f82099.gif)
 
-## Getting Started
+## Projemin BackEnd Tarafı
 
-This project is a starting point for a Flutter application.
+Projemin BackEnd tarafını Node.js Express kullanarak hazırladım. DB içinde mongo Atlas Kullandım.
+Hazırladıgım Api 'ı [HEROKU](https://www.heroku.com) üzerinden Yayınladım.
 
-A few resources to get you started if this is your first Flutter project:
+BackEnd Tarafı Kodlarına Erişmek İçin [buraya](https://github.com/aydnburak/Flutter-Web-English-Word-BackEnd)Tıklayınız.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
